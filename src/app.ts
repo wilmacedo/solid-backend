@@ -1,12 +1,11 @@
 import cors from "cors";
 import express, { NextFunction, Request, Response } from "express";
 import "express-async-errors";
-import http from "http";
 import { ZodError } from "zod";
 import { env } from "./env";
 import { usersRouter } from "./http/controllers/users/routes";
 
-const app = express();
+export const app = express();
 
 app.use(cors());
 app.use(express.json());
@@ -30,5 +29,3 @@ app.use((error: Error, _: Request, response: Response, __: NextFunction) => {
 
   return response.status(500).send({ message: "Internal server error" });
 });
-
-export const server = http.createServer(app);

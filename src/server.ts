@@ -1,7 +1,6 @@
-import { server } from "./app";
+import { app } from "./app";
 import { env } from "./env";
 
-server.listen(env.PORT);
-server.on("listening", () => {
+app.listen(env.PORT, () => {
   console.log("🚀 HTTP Server Running!");
 });

@@ -13,7 +13,7 @@ describe("Register case", () => {
     registerUseCase = new RegisterUseCase(userRepository);
   });
 
-  it("should register an user", async () => {
+  it("should be able to register an user", async () => {
     const { user } = await registerUseCase.execute({
       email: "wil.macedo.sa@gmail.com",
       name: "Wil Macedo",
