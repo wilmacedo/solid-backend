@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "tsx src/server.ts",
     "build": "tsup src",
-    "start": "node dist/server.cjs"
+    "start": "node dist/server.cjs",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +23,8 @@
     "prisma": "4.17.0-dev.79",
     "tsup": "^7.1.0",
     "tsx": "^3.12.7",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
   },
   "dependencies": {
     "@prisma/client": "4.17.0-dev.79",
